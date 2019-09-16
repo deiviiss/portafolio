@@ -1,0 +1,309 @@
+/*
+#  ·················
+#  ··_______________
+#  ·/·___/·___/·___/
+#  /·/__(__··|__··)·
+#  \___/____/____/··
+#  ·················
+*/
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro:400,700&display=swap');
+
+/* ------------------------ Variables */
+:root{
+    --grayblack-color:#1D252C;
+    --gray-color:#626262;
+    --white-color:#FFFFFF;
+    --celeste-color:#026FFF;
+    --arena-color:#FAFAFA;
+    --celestito-color:#F4FBFF;
+
+    /* tipografía */
+    --normal-font:'Source Sans Pro', sans-serif;
+    --title-font:'Fjalla One', sans-serif;
+
+}
+
+/* ------------------------ Estilos */
+body{
+    font-family: var(--normal-font);
+    margin: 0;
+}
+
+ol, ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: var(--title-font);
+    font-weight: normal;
+}
+
+h1{
+    font-size: 40px;
+    line-height: 150%; /*Alto de linea*/
+    letter-spacing: -.2px;
+    color: var(--white-color);
+    margin: 0;
+}
+
+h1 strong{
+    color: var(--celeste-color);
+}
+
+h2{
+    color: var(--celeste-color);
+    text-transform: uppercase;
+    font-family: var(--normal-font);
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.header{
+    background-color: var(--grayblack-color);
+    color: var(--white-color);
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header ol{
+    display: flex;
+    height: inherit;
+}
+
+.header ol li{
+    height: inherit;
+}
+
+.header a{
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 0 10px;
+    color: var(--white-color);
+}
+
+.menu{
+    height: inherit;
+}
+
+figure{
+    margin: 0;
+}
+
+.hero{
+    height: 300px;
+    /* background-image: url(/image/hero.jpg); */
+    background-color: var(--grayblack-color);
+    /* background-size: 500px 300px; */
+    /* background-repeat: no-repeat; */
+    /* background-position-x: right; Alinea a la derecha la imagen */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-img{
+    object-fit: cover;
+}
+
+.portfolio{
+    background: var(--arena-color);
+    padding: 20px;
+}
+
+.proyect{
+    border: 1px solid var(--gray-color);
+    border-radius: 10px;
+    /* margin: 10px; */
+    margin-bottom: 15px;
+    padding: 20px;
+    background: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #00FF00
+}
+
+.proyect-title{
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.proyect-course,
+.proyect-date,
+.proyect-url{
+     margin: 10px 0;
+}
+
+/* .proyect-date{
+    margin: 10px 0;
+} */
+
+.proyect-description{
+    font-size: 20px;
+}
+
+.proyect strong{
+    font-family: var(--title-font);
+}
+
+.proyect-details{
+    width: 500px;
+}
+
+.proyect-imageContainer{
+    width: 500px;
+}
+
+.event-list-title{
+    margin: 20px;
+}
+
+.event-list{
+    background: var(--arena-color);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+}
+
+.event{
+    margin: 10px auto;
+    width: 480px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden; /*Para generar scroll*/
+    background: var(--white-color);
+}
+
+.event-detail{
+    margin: 20px 40px;
+    background: var(--celestito-color);
+    margin-top: -40px;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.event-img{
+    width: 480px;
+    height: 200px;
+    object-fit: cover; /*Ajusta la imagen sin deformar*/
+}
+
+.event-description{
+    text-align: left;
+}
+
+.event-url{
+    border: 1px solid var(--celeste-color);
+    padding: 5px 20px;
+    text-decoration: none;
+    color: var(--celeste-color);
+    border-radius: 5px;
+}
+
+.contact{
+    background: var(--celeste-color);
+    color: var(--white-color);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .social{
+
+} */
+
+.social-link{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    margin: 0px 10px;
+}
+
+.social-link.twitter{
+    background-image: url(/image/twitter.svg);    
+}
+
+.social-link.github{
+    background-image: url(/image/github.svg);
+}
+
+.social-link.instagram{
+    background-image: url(/image/instagram.svg);
+}
+
+.form-email input{
+    border-color: var(--gray-color);
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px 20px 10px 25px;
+    background-image: url(/image/envelope.svg);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px;
+}
+
+.form-email button{
+    display: block;
+    /* margin: auto */
+    background: transparent;
+    color: var(--white-color);
+    width: 100px;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+.form-email h3{
+    font-family: var(--normal-font);
+}
+
+.footer{
+    background: var(--grayblack-color);
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer img{
+    vertical-align: middle;
+}
+
+.footer a{
+    color: var(--white-color);
+}
+
+.container{
+    width: 1000px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}
