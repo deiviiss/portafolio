@@ -55,7 +55,7 @@ h1{
     font-size: 40px;
     line-height: 150%; /*Alto de linea*/
     letter-spacing: -.2px;
-    color: var(--white-color);
+    color: red;
     margin: 0;
 }
 
