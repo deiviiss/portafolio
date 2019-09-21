@@ -1,3 +1,0 @@
-Cambios en mensaje secreto para reflejar.
-
-Para probar como funciona git --soft.
