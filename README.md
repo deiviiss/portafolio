@@ -1,9 +1,9 @@
-# Hyperblog 💚
-Un blog increíble para el[ curso de Desarrollo Web Online](https://platzi.com/clases/html5-css3/ "Curso de Desarrollo Web Online) de [Platzi](https://platzi.com/ "Platzi")
+# Portafolio 💚
+Un blog increíble para el[ curso de Desarrollo Web Online](https://platzi.com/clases/html5-css3/ "Curso de Desarrollo Web Online") de [Platzi](https://platzi.com/ "Platzi")
 > El curso de Desarrollo Web online de Platzi es lo que me hacía falta para triplicar mi salario y lanzarme a la industria del tejido de lana sintética con Machine Learning.
 > - niñita.
 
-## En este curso vemos de todo
+## En este curso vemos de todo.
 * Estructura básica de un sitio web.
 * HTML y CSS.
 * El verdadero amor por las buenas prácticas.
