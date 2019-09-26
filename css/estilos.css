@@ -72,6 +72,8 @@ h2{
     margin-bottom: 40px;
 }
 
+/* ------------------------ header */
+
 .header{
     background-color: var(--grayblack-color);
     color: var(--white-color);
@@ -79,6 +81,7 @@ h2{
     height: 70px;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .header ol{
@@ -106,6 +109,8 @@ figure{
     margin: 0;
 }
 
+/* ------------------------ sections */
+
 .hero{
     height: 300px;
     /* background-image: url(/image/hero.jpg); */
@@ -116,10 +121,15 @@ figure{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 2px solid var(--white-color);
+    flex-wrap: wrap;
 }
 
 .hero-img{
+    height: 280px;
+    width: 450px;
     object-fit: cover;
+    border-radius: 2px;
 }
 
 .portfolio{
@@ -137,6 +147,7 @@ figure{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .proyect-title{
@@ -228,6 +239,7 @@ figure{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 /* .social{
@@ -243,15 +255,15 @@ figure{
 }
 
 .social-link.twitter{
-    background-image: url(/image/twitter.svg);    
+    background-image: url("../image/twitter.svg");
 }
 
 .social-link.github{
-    background-image: url(/image/github.svg);
+    background-image: url("../image/github.svg");
 }
 
 .social-link.instagram{
-    background-image: url(/image/instagram.svg);
+    background-image: url("../image/instagram.svg");
 }
 
 .form-email input{
@@ -259,7 +271,7 @@ figure{
     border-style: solid;
     border-radius: 5px;
     padding: 10px 20px 10px 25px;
-    background-image: url(/image/envelope.svg);
+    background-image: url("../image/envelope.svg");
     background-size: 15px 15px;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -281,12 +293,15 @@ figure{
     font-family: var(--normal-font);
 }
 
+/* ------------------------ footer */
+
 .footer{
     background: var(--grayblack-color);
     color: var(--white-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer img{
@@ -298,11 +313,60 @@ figure{
 }
 
 .container{
-    width: 1000px;
+    max-width: 1000px;
+    /* width: 100%; */
+    flex: 1; /*Toma todo el ancho de este elemento */
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;
     align-items: inherit;
     height: inherit;
     flex-wrap: inherit;
+}
+
+/* ------------------------ desktop first desde el MQ más grande */
+
+@media screen and (max-width: 1024px){
+    body{
+        border: 2px solid green;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .header .logo{
+        text-align: center;
+    }
+
+    .header{
+        display: block;
+        height: auto;
+    }
+
+    .header ol{
+        display: block;
+    }
+
+    .header ol li{
+        height: 50px;
+    }
+
+    .header a{
+        justify-content: center;
+    }
+    body{
+        border: 2px solid red;
+    
+    }
+}
+
+@media screen and (max-width: 480px){
+    body{
+        border: 2px solid yellow;
+    }
+}
+
+@media screen and (max-width: 320px){
+    body{
+        border: 2px solid blue;
+    }
 }
