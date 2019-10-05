@@ -69,7 +69,7 @@ h2{
     font-family: var(--normal-font);
     font-weight: bold;
     font-size: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 /* ------------------------ header */
@@ -109,7 +109,7 @@ figure{
     margin: 0;
 }
 
-/* ------------------------ sections */
+/* ------------------------ hero */
 
 .hero{
     height: 300px;
@@ -132,6 +132,8 @@ figure{
     border-radius: 2px;
 }
 
+/* ------------------------ proyect */
+
 .portfolio{
     background: var(--arena-color);
     padding: 20px;
@@ -148,6 +150,10 @@ figure{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.proyect-details{
+    width: 50%;
 }
 
 .proyect-title{
@@ -174,31 +180,38 @@ figure{
     font-family: var(--title-font);
 }
 
-.proyect-details{
-    width: 500px;
+.proyect-imageContainer{
+    width: 50%;
 }
 
-.proyect-imageContainer{
-    width: 500px;
+.proyect-imageContainer img{
+    max-width: 100%;
+}
+
+/* ------------------------ events */
+
+.event-list{
+    border: 2px solid red;
+    background: var(--arena-color);
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    margin: 20px;
+    /* border: 1px solid red; */
+    /* justify-content: space-between; */
 }
 
 .event-list-title{
-    margin: 20px;
+    border: 2px solid;
 }
 
-.event-list{
-    background: var(--arena-color);
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px;
-    /* border: 1px solid red; */
-    justify-content: space-between;
-}
+
 
 .event{
-    margin: 10px auto;
-    width: 480px;
+    border:2px solid;
+    margin: 1%;
+    width: 48%;
     flex-shrink: 0;
+    display: flex;
     border-radius: 10px;
     overflow: hidden; /*Para generar scroll*/
     background: var(--white-color);
@@ -214,9 +227,9 @@ figure{
     border-radius: 5px;
 }
 
-.event-img{
+.event img{
     width: 480px;
-    height: 200px;
+    height: 240px;
     object-fit: cover; /*Ajusta la imagen sin deformar*/
 }
 
@@ -232,10 +245,12 @@ figure{
     border-radius: 5px;
 }
 
+/* ------------------------ contac */
+
 .contact{
     background: var(--celeste-color);
     color: var(--white-color);
-    height: 150px;
+    height: 170px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -286,7 +301,7 @@ figure{
     width: 100px;
     padding: 10px 0;
     border-radius: 5px;
-    margin: 5px 0px;
+    margin: 15px 0px;
 }
 
 .form-email h3{
@@ -327,12 +342,53 @@ figure{
 /* ------------------------ desktop first desde el MQ más grande */
 
 @media screen and (max-width: 1024px){
+
     body{
         border: 2px solid green;
     }
+
+    .container{
+        padding: 0 1em;
+    }
+
+    /* ------------------------ hero */
+
+    .hero{
+        height: auto;
+        position: relative;
+        overflow: hidden; /*Para que el elemento no se desborde*/
+        padding: 2em;
+    }
+
+    .hero-img{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 2em;
+        z-index: 2;
+    }
+
+    h2{
+        font-size: 1.4em;
+    }
+
+    .proyect-title{
+        font-size: 1.8em;
+    }
+
+
 }
 
 @media screen and (max-width: 767px){
+
+    /* ------------------------ header */
     .header .logo{
         text-align: center;
     }
@@ -350,9 +406,79 @@ figure{
         height: 50px;
     }
 
+    h1{
+        background: rgba(0, 0, 0, .5);
+        font-size: 1.8em;
+    }
+
+    h2{
+        margin-bottom: .5em;
+        font-size: 1.3em;
+    }
+
     .header a{
         justify-content: center;
     }
+
+    /* ------------------------ proyect */
+    .proyect{
+        display: block;
+    }
+
+    .proyect-imageContainer{
+        width: auto;
+        text-align: center;
+    }
+
+    .proyect-details{
+        width: auto;
+        font-size: 16px;
+    }
+
+    .proyect-title{
+        font-size: 1.5em;
+        margin-bottom: .3em;
+    }
+
+    .proyect-course{
+        font-size: 1.2em;
+    }
+
+    .proyect-date{
+        font-size: 1em;
+    }
+
+    .proyect-url{
+        font-size: 1em;
+    }
+    .proyect-description{
+        font-size: .8em;
+    }
+    
+    .proyect-course,
+    .proyect-date,
+    .proyect-url{
+        margin: .4em 0;
+    }
+
+    /* ------------------------ event */
+    .event{
+        width: auto;
+        flex-shrink: initial;
+    }
+
+    .event img{
+        width: 100%;
+        /* height: auto; */
+    }
+
+    .event-detail{
+        /* 1m = 16px si no se ha cambiado el font size del padre */
+        margin: -2em .5em .5em;
+        padding: 1em;
+    }
+
+
     body{
         border: 2px solid red;
     
@@ -360,12 +486,61 @@ figure{
 }
 
 @media screen and (max-width: 480px){
+
+    h1{
+        font-size: 1.5em;
+    }
+
+    h2{
+        font-size: 1em;
+    }
+
+    .proyect-details{
+        width: auto;
+        font-size: 12px;
+    }
+
+    .proyect-details{
+        font-size: 1em;
+    }
+
+    .contact{
+        height: auto;
+        padding: 1.5em 0;
+        display: block;
+        text-align: center;
+    }
+
+    .form-email h3{
+        margin-top: 0;
+    }
+
+    .form-email button{
+        margin: 1em auto;
+    }
+
+    .footer{
+        display: block;
+        border: 1em solid transparent;
+        /* padding: 1em; */
+        text-align: center;
+    }
+
     body{
         border: 2px solid yellow;
     }
 }
 
 @media screen and (max-width: 320px){
+
+    h1{
+        font-size: 1.2em;
+    }
+
+    .hero{
+       padding: 2em;
+    }
+
     body{
         border: 2px solid blue;
     }
