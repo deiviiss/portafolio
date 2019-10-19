@@ -309,7 +309,7 @@ figure{
     border-radius: 5px;
 }
 
-/* ------------------------------------------------ contac */
+/* ------------------------------------------------ contact */
 
 .contact{
     background: var(--font-color);
@@ -611,6 +611,29 @@ figure{
         /* 1m = 16px si no se ha cambiado el font size del padre */
         margin: -2em .5em .5em;
         padding: 1em;
+    }
+}
+
+/* ------------------------------------------------ 595px */
+
+@media screen and (max-width: 595px){
+
+    .form-email button{
+        margin: 1em auto;
+    }
+
+    .contact{
+        height: auto;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .social{
+        margin-bottom: .3em;
+    }
+
+    .footer{
+        justify-content: center;
     }
 }
 
