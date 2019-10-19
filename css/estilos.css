@@ -9,15 +9,58 @@
 
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
 
-/* ------------------------ Variables */
+/* ------------------------------------------------ font-Magic */
+
+@font-face {
+    font-family: 'Magic';
+    src: url('magic_dafont-webfont.woff') format("woff2"), url('magic_dafont-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal; }
+
+    /* ------------------------------------------------ font-icomoon */
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?qvzzfu');
+    src:  url('../fonts/icomoon.eot?qvzzfu#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?qvzzfu') format('truetype'),
+      url('../fonts/icomoon.woff?qvzzfu') format('woff'),
+      url('../fonts/icomoon.svg?qvzzfu#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    /* speak: none; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e903";
+  }
+
+/* ------------------------------------------------ Variables */
 :root{
     --grayblack-color:#1D252C;
-    --gray-color:#626262;
-    --white-color:#FFFFFF;
-    --celeste-color:#026FFF;
     --arena-color:#FAFAFA;
     --celestito-color:#F4FBFF;
+    --border-color:#626262;
+    --white-color:#FFFFFF;
+    --font-color:#026FFF;
 
     /* tipografía */
     --normal-font:'Source Sans Pro', sans-serif;
@@ -25,7 +68,7 @@
 
 }
 
-/* ------------------------ Estilos */
+/* ------------------------------------------------ Estilos */
 body{
     font-family: var(--normal-font);
     margin: 0;
@@ -60,11 +103,11 @@ h1{
 }
 
 h1 strong{
-    color: var(--celeste-color);
+    color: var(--font-color);
 }
 
 h2{
-    color: var(--celeste-color);
+    color: var(--font-color);
     text-transform: uppercase;
     font-family: var(--normal-font);
     font-weight: bold;
@@ -72,7 +115,12 @@ h2{
     margin-bottom: 30px;
 }
 
-/* ------------------------ header */
+h6{
+    font-size: 1.3em;
+    margin: 1em 0 1em 0;
+}
+
+/* ------------------------------------------------ header */
 
 .header{
     background-color: var(--grayblack-color);
@@ -109,7 +157,7 @@ figure{
     margin: 0;
 }
 
-/* ------------------------ hero */
+/* ------------------------------------------------ hero */
 
 .hero{
     height: 300px;
@@ -121,7 +169,7 @@ figure{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 2px solid var(--white-color);
+    /* border-top: 2px solid var(--white-color); */
     flex-wrap: wrap;
 }
 
@@ -132,7 +180,7 @@ figure{
     border-radius: 2px;
 }
 
-/* ------------------------ proyect */
+/* ------------------------------------------------ proyect */
 
 .portfolio{
     background: var(--arena-color);
@@ -140,16 +188,20 @@ figure{
 }
 
 .proyect{
-    border: 1px solid var(--gray-color);
+    border: .5px solid var(--border-color);
     border-radius: 10px;
     /* margin: 10px; */
     margin-bottom: 15px;
     padding: 20px;
-    background: var(--white-color);
+    background: var(--celestito-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.proyect-details{
+    width: 49%;
 }
 
 .proyect-title{
@@ -161,7 +213,7 @@ figure{
 .proyect-course,
 .proyect-date,
 .proyect-url{
-     margin: 10px 0;
+    margin: 10px 0;
 }
 
 /* .proyect-date{
@@ -176,9 +228,6 @@ figure{
     font-family: var(--title-font);
 }
 
-.proyect-details{
-    width: 50%;
-}
 
 .proyect-imageContainer{
     width: 50%;
@@ -188,7 +237,28 @@ figure{
     max-width: 100%;
 }
 
-/* ------------------------ events */
+.proyect ol{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.proyect ol li{
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.proyect a{
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 0 10px;
+    color: var(--grayblack-color);
+}
+
+/* ------------------------------------------------ events */
 .event-list-title{
     margin: 20px;
 }
@@ -232,17 +302,17 @@ figure{
 }
 
 .event-url{
-    border: 1px solid var(--celeste-color);
+    border: 1px solid var(--font-color);
     padding: 5px 20px;
     text-decoration: none;
-    color: var(--celeste-color);
+    color: var(--font-color);
     border-radius: 5px;
 }
 
-/* ------------------------ contac */
+/* ------------------------------------------------ contac */
 
 .contact{
-    background: var(--celeste-color);
+    background: var(--font-color);
     color: var(--white-color);
     height: 170px;
     display: flex;
@@ -275,8 +345,12 @@ figure{
     background-image: url("../image/instagram.svg");
 }
 
+.social-link.linkedin{
+    background-image: url("../image/facebook.svg");
+}
+
 .form-email input{
-    border-color: var(--gray-color);
+    border-color: var(--border-color);
     border-style: solid;
     border-radius: 5px;
     padding: 10px 20px 10px 25px;
@@ -302,7 +376,7 @@ figure{
     font-family: var(--normal-font);
 }
 
-/* ------------------------ footer */
+/* ------------------------------------------------ footer */
 
 .footer{
     background: var(--grayblack-color);
@@ -333,19 +407,60 @@ figure{
     flex-wrap: inherit;
 }
 
-/* ------------------------ desktop first desde el MQ más grande */
+.html-video{
+    width: 100%;
+    max-width: 1024px;
+    height: auto;
+}
 
-@media screen and (max-width: 1024px){
+.flexible-video{
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    background: blue;
+    position: relative;
+}
 
-    body{
+.youtube-video{
+    /* width: 100%;
+    height:auto; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* z-index: 3; */
+}
+
+.burger-button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /*Toma el 50% de width y de height*/
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    z-index: 4;
+    left: 5px;
+    top: 5px;
+    color: var(--white-color);
+} 
+
+/* ------------------------------------------------ desktop first desde el MQ más grande */
+/* ------------------------------------------------ 1024px */
+
+@media screen and (max-width: 1023px){
+
+    /* body{
         border: 2px solid green;
-    }
+    } */
 
     .container{
         padding: 0 1em;
     }
-
-    /* ------------------------ header */
 
     .hero{
         height: auto;
@@ -367,13 +482,23 @@ figure{
     h1{
         font-size: 2em;
         z-index: 2;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 10px;
     }
-
-
-
 }
 
+/* ------------------------------------------------ 767px */
+
 @media screen and (max-width: 767px){
+
+    /* body{
+        border: 2px solid red;
+    
+    }*/
+
+    .burger-button{
+        display: block;
+    }
 
     .header .logo{
         text-align: center;
@@ -398,6 +523,32 @@ figure{
 
     .header a{
         justify-content: center;
+        height: 40px;
+        font-size: 2em;
+        text-decoration: underline;
+        margin-bottom: .5em;
+    }
+
+    .menu{
+        background: rgba(2, 111, 255, .5);
+        position: fixed;
+        z-index: 3;
+        top:0;
+        bottom: 0;
+        left:-100vw;
+        width: 100vw; /* height: 100vh; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 2s;
+    }
+
+    .menu.is-active{
+        left: 0;
+    }
+
+    .portfolio{
+        padding: 0;
     }
 
     .proyect{
@@ -411,7 +562,7 @@ figure{
 
     .proyect-details{
         width: auto;
-        font-size: 16px;
+        font-size: 1em;
     }
 
     .proyect-title{
@@ -419,26 +570,32 @@ figure{
         margin-bottom: .3em;
     }
 
-    .proyect-course{
-        font-size: 1.2em;
+    h6.proyect-course{
+        font-size: 1em;
     }
 
     .proyect-date{
-        font-size: 1em;
+        font-size: .9em;
     }
 
     .proyect-url{
-        font-size: 1em;
+        font-size: .9em;
     }
+
     .proyect-description{
         font-size: .8em;
     }
-    
+
     .proyect-course,
     .proyect-date,
     .proyect-url{
         margin: .4em 0;
-}
+    }
+
+    .proyect ol{
+        font-size: .8em;
+        flex-wrap: wrap;
+    }
 
     .event{
         width: auto;
@@ -447,7 +604,7 @@ figure{
 
     .event img{
         width: 100%;
-        /* height: auto; */
+        height: auto;
     }
 
     .event-detail{
@@ -455,15 +612,15 @@ figure{
         margin: -2em .5em .5em;
         padding: 1em;
     }
-
-
-    body{
-        border: 2px solid red;
-    
-    }
 }
 
+/* ------------------------------------------------ 480px */
+
 @media screen and (max-width: 480px){
+
+    /*body{
+        border: 2px solid yellow;
+    }*/
 
     h1{
         font-size: 1.5em;
@@ -495,24 +652,22 @@ figure{
         /* padding: 1em; */
         text-align: center;
     }
-
-    body{
-        border: 2px solid yellow;
-    }
 }
+
+/* ------------------------------------------------ 320px */
 
 @media screen and (max-width: 320px){
 
+    /*body{
+        border: 2px solid blue;
+    }*/
+
     h1{
         font-size: 1.2em;
-        background: rgba(0, 0, 0, .5);
+        
     }
 
     .hero{
        padding: 2em;
-    }
-
-    body{
-        border: 2px solid blue;
     }
 }

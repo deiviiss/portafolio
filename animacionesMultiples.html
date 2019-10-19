@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transformaciones - Animaciones Múltiples</title>
+
+    <!-- Mis estilos CSS -->
+    <link rel="stylesheet" href="animaciones/animacionesMultiples.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="cuadrado" id="cuadrado">
+            ¡Hola mundo!
+        </div>
+    </div>
+
+    <script>
+        const $cuadrado = document.getElementById('cuadrado');
+        // $cuadrado.addEventListener('nombre del event', 'Que hago cuando el elemento ocurra');
+        $cuadrado.addEventListener('animationend', (event) =>{
+            console.log(event);
+        });
+    </script>
+</body>
+</html>

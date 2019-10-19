@@ -1,0 +1,73 @@
+/*
+#  ·················
+#  ··_______________
+#  ·/·___/·___/·___/
+#  /·/__(__··|__··)·
+#  \___/____/____/··
+#  ·················
+*/
+
+/* ------------------------------------------------ Variables */
+:root{
+    --grayblack-color:#1D252C;
+    --gray-color:#626262;
+    --white-color:#FFFFFF;
+    --celeste-color:#026FFF;
+    --arena-color:#FAFAFA;
+    --celestito-color:#F4FBFF;
+    --platzi-color:#7DC900;
+
+    /* tipografía */
+    --normal-font:'Source Sans Pro', sans-serif;
+    --title-font:'Fjalla One', sans-serif;
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: var(--white-color);
+    font-family: var(--normal-font);
+}
+
+.container{
+    border: 2px solid rebeccapurple;
+}
+
+.container:hover .cuadrado{
+    /*transform-origin: x y;*/
+    
+    /* transform-origin: center; */
+    /*transform-origin: 50% 50%;*/
+    
+    /* transform-origin: top; */
+    /* transform-origin: bottom; */
+    
+    /* transform-origin: left; */
+    /*transform-origin: 0% 50%;*/
+    
+    /*transform-origin: right;*/
+    /*transform-origin: 100% 50%;*/
+
+    transform-origin: left top;
+    /*transform-origin: right top;*/
+    /* transform-origin: right bottom; */
+    /*transform-origin: left bottom;*/
+    
+    /*transform: rotate(45deg);*/
+    /*transform: rotate(-45deg);*/
+    /* transform: rotateX(45deg); */
+    /* transform: rotateY(45deg); */
+    transform: rotateZ(-45deg);
+}
+
+.cuadrado{
+    width: 200px;
+    height: 200px;
+    background: var(--grayblack-color);
+    margin: 20px;
+    transition: .3s;
+}
+

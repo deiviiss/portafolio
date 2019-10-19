@@ -1,0 +1,83 @@
+/*
+#  ·················
+#  ··_______________
+#  ·/·___/·___/·___/
+#  /·/__(__··|__··)·
+#  \___/____/____/··
+#  ·················
+*/
+
+/* ------------------------------------------------ Variables */
+:root{
+    --grayblack-color:#1D252C;
+    --gray-color:#626262;
+    --white-color:#FFFFFF;
+    --celeste-color:#026FFF;
+    --arena-color:#FAFAFA;
+    --celestito-color:#F4FBFF;
+    --platzi-color:#7DC900;
+
+    /* tipografía */
+    --normal-font:'Source Sans Pro', sans-serif;
+    --title-font:'Fjalla One', sans-serif;
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: var(--white-color);
+    font-family: var(--normal-font);
+}
+
+.container{
+    border: 2px solid rebeccapurple;
+    width: 100%;
+}
+
+.container:hover .cuadrado{
+    animation-play-state: paused;
+}
+
+.cuadrado{
+    width: 200px;
+    height: 200px;
+    background:var(--platzi-color);
+    margin: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transition: .5s; */
+    animation-name: cuadrado;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    position: relative;
+
+    /* animation-timing-function: ease; */
+    /* animation-timing-function: ease-in; */
+    /* animation-timing-function: ease-out; */
+    /* animation-timing-function: ease-in-out; */
+    /* animation-timing-function: linear; */
+    /* animation-timing-function: steps(60); */
+
+    animation-timing-function: cubic-bezier(0,.74,.38,1);
+}
+
+@keyframes cuadrado{
+    0%{
+        opacity: 1;
+        left: 0;
+    }
+    100%{
+        opacity: .5;
+        left: calc(100% - 220px);
+        color: var(--grayblack-color);
+    }
+}
+

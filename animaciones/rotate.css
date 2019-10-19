@@ -1,0 +1,60 @@
+/*
+#  ·················
+#  ··_______________
+#  ·/·___/·___/·___/
+#  /·/__(__··|__··)·
+#  \___/____/____/··
+#  ·················
+*/
+
+/* ------------------------------------------------ Variables */
+:root{
+    --grayblack-color:#1D252C;
+    --gray-color:#626262;
+    --white-color:#FFFFFF;
+    --celeste-color:#026FFF;
+    --arena-color:#FAFAFA;
+    --celestito-color:#F4FBFF;
+    --platzi-color:#7DC900;
+
+    /* tipografía */
+    --normal-font:'Source Sans Pro', sans-serif;
+    --title-font:'Fjalla One', sans-serif;
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: var(--white-color);
+    font-family: var(--normal-font);
+}
+
+.container{
+    border: 2px solid rebeccapurple;
+}
+
+.container:hover .cuadrado{
+    /* transform: rotate(45deg); */
+    /* transform: rotate(-45deg); */
+    /* transform: rotateX(45deg); */
+    /* transform: rotateY(45deg); */
+    /* transform: rotateZ(45deg); */
+    /* transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg); */
+    /* --- transform: rotate3d(x, y, z, angle); --- */
+    /* transform: rotate3d(1, 0, 0, 45deg); */
+    /* transform: rotate3d(0, 1, 0, 45deg); */
+    /* transform: rotate3d(0, 0, 1, 45deg); */
+    transform: rotate3d(1, 1, 1, 45deg);
+}
+
+.cuadrado{
+    width: 200px;
+    height: 200px;
+    background: var(--platzi-color);
+    margin: 20px;
+    transition: 1s;
+}
+
